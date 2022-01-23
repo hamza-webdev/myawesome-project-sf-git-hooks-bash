@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\ArticleRepository;
+use Doctrine\ORM\Mapping\Table;
 use Doctrine\ORM\Mapping as ORM;
-use phpDocumentor\Reflection\Types\Boolean;
+use App\Repository\ArticleRepository;
 
 /**
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
- *
+ * @Table(name="articles")
  */
 class Article
 {
@@ -47,12 +47,12 @@ class Article
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private \DateTime $editedAt;
+    private \DateTimeInterface $editedAt;
 
     /**
      * @ORM\Column(type="boolean")
      */
-    private Boolean $isPublished;
+    private Bool $isPublished;
 
     public function getId(): ?int
     {

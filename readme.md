@@ -92,7 +92,7 @@ OR
     * execute cmd: npx husky add .husky/pre-push 'npx --no-install validate-branch-name'
     * Patterne de file validate-branch-namerc.js =(pattern:  '^(main|staging|production|prod|dev)$|^(feat|fix|bump|rel(?:ease)?)/.+$')
     * creer une branch avec la bonne nommage ()
-    - Faire un push de branch blabal vers main ou origin 
+    - Faire un push de branch blabla vers main ou origin sachant que le nom de branchj blabla n'est pas conforme
 
 
 

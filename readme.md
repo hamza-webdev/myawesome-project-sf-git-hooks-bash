@@ -91,6 +91,9 @@ OR
     * Creer un fichier nommé validate-branch-namerc.js (into patterne)
     * execute cmd: npx husky add .husky/pre-push 'npx --no-install validate-branch-name'
 
+    ## Crear un cle SSH in gitlab
+    * ssh-keygen -t ed25519 -C "email"
+
 
 
 

@@ -1,1 +1,2 @@
-console.log('je suis ici ');
+console.error('je suis ici ');
+console.warn('je suis ici ');

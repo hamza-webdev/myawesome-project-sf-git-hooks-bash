@@ -88,7 +88,7 @@ OR
     ## Nommage de Branch Git avec les hooks Git, husky et validate-branch-name
 
     * npm install --save-dev validate-branch-name
-    * Creer un fichier nommé validate-branch-namerc.js (into patterne)
+    * Creer un fichier nommé validate-branch-name.config.js (into patterne)
     * execute cmd: npx husky add .husky/pre-push 'npx --no-install validate-branch-name'
 
     ## Crear un cle SSH in gitlab

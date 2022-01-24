@@ -69,6 +69,24 @@ OR
     * npm install --save-dev @commitlint/cli @commitlint/config-conventional
     - creer un fichier commitlint.config.js
     * npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
+    or
+    * npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
+
+    # Mettre en place citizen message commit
+    * npm install --save-dev commitizen @commitlint/cz-commitlint
+    * add some lines in pagckage.json file
+    ```
+    "config": {
+        "commitizen": {
+            "path": "@commitlint/cz-commitlint""
+        }
+    }
+    ```
+    - Asistance de message commit with cz (avant de commiter tapez)
+    * > npx cz
+    
+
+
 
 
 

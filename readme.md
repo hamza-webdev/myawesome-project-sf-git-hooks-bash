@@ -90,6 +90,9 @@ OR
     * npm install --save-dev validate-branch-name
     * Creer un fichier nommé validate-branch-name.config.js (into patterne)
     * execute cmd: npx husky add .husky/pre-push 'npx --no-install validate-branch-name'
+    * Patterne de file validate-branch-namerc.js =(pattern:  '^(main|staging|production|prod|dev)$|^(feat|fix|bump|rel(?:ease)?)/.+$')
+    * creer une branch avec la bonne nommage ()
+    - Faire un push de branch blabla vers main ou origin sachant que le nom de branchj blabla n'est pas conforme
 
     ## Crear un cle SSH in gitlab
     * ssh-keygen -t ed25519 -C "email"
@@ -99,7 +102,7 @@ OR
 
 
 
-
+ 
 
 
 

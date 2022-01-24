@@ -37,3 +37,14 @@ OR
     After reset owner back to root
     sudo chown -R root /usr/share/code
 
+    # changement de de bash en zsh in linux
+    * sudo apt install zsh
+    * echo $0 
+    -  change to zsh
+    * sudo chsh -> /bin/zsh->
+
+    ## GIT Hooks pre-commit ..
+
+    * npm install --save-dev git-precommit-checks
+
+

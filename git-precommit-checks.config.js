@@ -19,6 +19,7 @@ module.exports = {
             regex: /var_dump/i,
             message: '😨 🤔 tu as du var_dump a enlever'
         }
-    ]
+    ],
+
 
 };

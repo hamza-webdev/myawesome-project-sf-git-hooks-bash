@@ -32,95 +32,103 @@ module.exports = {
         ],
     },
     prompt: {
+        messages: {
+            skip: '::yum: skip',
+            max: ' pas plus de %d caractères',
+            min: 'au moins %d caractères',
+            emptyWarning: 'ne peut être vide',
+            upperLimitWarning: 'au-dessus de la limite',
+            lowerLimitWarning: 'sous la limite'
+        },
         questions: {
             type: {
-                description: "Select the type of change that you're committing",
+                description: "Choisissez le type de modification que concerne votre commit :",
                 enum: {
                     feat: {
-                        description: 'A new feature',
+                        description: 'Ajout/mise à jour de fonctionnalité',
                         title: 'Features',
                         emoji: '✨',
                     },
                     fix: {
-                        description: 'A bug fix',
+                        description: 'Correction de bug',
                         title: 'Bug Fixes',
                         emoji: '🐛',
                     },
                     docs: {
-                        description: 'Documentation only changes',
+                        description: 'Ajout/modif. de documentation',
                         title: 'Documentation',
                         emoji: '📚',
                     },
                     style: {
-                        description: 'Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)',
+                        description: 'Modifs de style et de mise en forme du code (espacements, virgules, etc.)',
                         title: 'Styles',
                         emoji: '💎',
                     },
                     refactor: {
-                        description: 'A code change that neither fixes a bug nor adds a feature',
+                        description: 'Modif. des sources n’étant ni un correctif, ni un ajout de fonctionnalité',
                         title: 'Code Refactoring',
                         emoji: '📦',
                     },
                     perf: {
-                        description: 'A code change that improves performance',
+                        description: 'Amélioration de la performance',
                         title: 'Performance Improvements',
                         emoji: '🚀',
                     },
                     test: {
-                        description: 'Adding missing tests or correcting existing tests',
+                        description: 'Ajout ou correction de tests',
                         title: 'Tests',
                         emoji: '🚨',
                     },
                     build: {
-                        description: 'Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)',
+                        description: 'Modif. affectant le "build" ou les dépendances externes (exemples de contextes :  webpack, broccoli, npm)',
                         title: 'Builds',
                         emoji: '🛠',
                     },
                     ci: {
-                        description: 'Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)',
+                        description: 'Modif. de la configuration ou des scripts liés à la CI (Travis, Circle, BrowserStack, SauceLabs, etc.)',
                         title: 'Continuous Integrations',
                         emoji: '⚙️',
                     },
                     chore: {
-                        description: "Other changes that don't modify src or test files",
+                        description: "Autres mises à jour ne modifiant ni les sources, ni les tests",
                         title: 'Chores',
                         emoji: '♻️',
                     },
                     revert: {
-                        description: 'Reverts a previous commit',
-                        title: 'Reverts',
+                        description: 'Annuler (revert) un commit précédent',
+                        title: 'Revert',
                         emoji: '🗑',
                     },
                 },
             },
             scope: {
-                description: 'What is the scope of this change (e.g. component or file name)',
+                description: 'Quel est le contexte des modifications (composant, nom de fichier)',
             },
             subject: {
-                description: 'Write a short, imperative tense description of the change',
+                description: 'Écrivez une description concise, à l’impératif',
             },
             body: {
-                description: 'Provide a longer description of the change',
+                description: 'Renseignez une description plus détaillée des modifications',
             },
             isBreaking: {
-                description: 'Are there any breaking changes?',
+                description: 'Y a-il des changements majeurs ("breaking changes") ?',
             },
             breakingBody: {
-                description: 'A BREAKING CHANGE commit requires a body. Please enter a longer description of the commit itself',
+                description: 'Un commit cassant la compatibilité ascendante ("breaking changes") nécessite un corps de message. Veuillez renseigner une description plus longue et détaillée que la première ligne du commit.',
             },
             breaking: {
-                description: 'Describe the breaking changes',
+                description: 'Décrivez les "breaking changes"',
             },
             isIssueAffected: {
-                description: 'Does this change affect any open issues?',
+                description: 'Cela concerne-t-il un ticket existant ?',
             },
             issuesBody: {
-                description: 'If issues are closed, the commit requires a body. Please enter a longer description of the commit itself',
+                description: 'Vous devez ajouter un corps au message si ce commit ferme des tickets. Essayez de renseigner une description plus longue et détaillée que la première ligne du commit.',
             },
             issues: {
-                description: 'Add issue references (e.g. "fix #123", "re #123".)',
+                description: 'Ajoutez une référence de ticket ("fix #123", "ref #123")',
             },
         },
-    },
+    }
 
 };

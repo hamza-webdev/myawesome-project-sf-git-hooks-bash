@@ -33,8 +33,8 @@ module.exports = {
     },
     prompt: {
         messages: {
-            skip: '::yum: skip',
-            max: ' pas plus de %d caractères',
+            skip: '🤪 skip',
+            max: '👍🏻 pas plus de %d caractères',
             min: 'au moins %d caractères',
             emptyWarning: 'ne peut être vide',
             upperLimitWarning: 'au-dessus de la limite',
@@ -42,7 +42,7 @@ module.exports = {
         },
         questions: {
             type: {
-                description: "Choisissez le type de modification que concerne votre commit :",
+                description: "🧐 Choisissez le type de modification que concerne votre commit :",
                 enum: {
                     feat: {
                         description: 'Ajout/mise à jour de fonctionnalité',
@@ -102,16 +102,16 @@ module.exports = {
                 },
             },
             scope: {
-                description: 'Quel est le contexte des modifications (composant, nom de fichier)',
+                description: '🤔 Quel est le contexte des modifications (composant, nom de fichier)',
             },
             subject: {
-                description: 'Écrivez une description concise, à l’impératif',
+                description: '😕 Écrivez une description concise, à l’impératif',
             },
             body: {
-                description: 'Renseignez une description plus détaillée des modifications',
+                description: '😤 Renseignez une description plus détaillée des modifications',
             },
             isBreaking: {
-                description: 'Y a-il des changements majeurs ("breaking changes") ?',
+                description: '🧐 Y a-il des changements majeurs ("breaking changes") ?',
             },
             breakingBody: {
                 description: 'Un commit cassant la compatibilité ascendante ("breaking changes") nécessite un corps de message. Veuillez renseigner une description plus longue et détaillée que la première ligne du commit.',
@@ -126,7 +126,7 @@ module.exports = {
                 description: 'Vous devez ajouter un corps au message si ce commit ferme des tickets. Essayez de renseigner une description plus longue et détaillée que la première ligne du commit.',
             },
             issues: {
-                description: 'Ajoutez une référence de ticket ("fix #123", "ref #123")',
+                description: '🥳 Ajoutez une référence de ticket ("fix #123", "ref #123")',
             },
         },
     }

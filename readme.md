@@ -38,16 +38,20 @@
 -   sudo chown -R root /usr/share/code
 -
     # changement de de bash en zsh in linux
+    ```
     * sudo apt install zsh
     * echo $0 
     -  change to zsh
     * sudo chsh -> /bin/zsh->
+    ```
 
     ## GIT Hooks pre-commit ..
 
+    ```
     * npm install --save-dev git-precommit-checks
     * npm install husky
     * npx husky install
+    ```
 
     - creer fichier git-precommit-checks.config.js
     *  touch git-precommit-checks.config.js
@@ -66,9 +70,13 @@
     * Type: fix:, feat:, build:, chore:, ci:, docs:, style:, refactor:, perf:, test:
 
     # install and configuration commitLint
-    * npm install --save-dev @commitlint/cli @commitlint/config-conventional
+    ```
+    npm install --save-dev @commitlint/cli @commitlint/config-conventional
+    ```
     - creer un fichier commitlint.config.js
-    * npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
+    ```
+    npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
+    ```
     * or
 
     * npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
@@ -83,15 +91,22 @@
             "path": "@commitlint/cz-commitlint""
         }
     }
-    ```
+   ```
     - Asistance de message commit with cz (avant de commiter tapez)
+    
     * > npx cz
 
     ## Nommage de Branch Git avec les hooks Git, husky et validate-branch-name
 
-    * npm install --save-dev validate-branch-name
+    ```
+    npm install --save-dev validate-branch-name
+    ```
     * Creer un fichier nommé validate-branch-name.config.js (into patterne)
-    * execute cmd: npx husky add .husky/pre-push 'npx --no-install validate-branch-name'
+    * execute cmd: 
+    ```
+    npx husky add .husky/pre-push 'npx --no-install 
+    ```
+    validate-branch-name'
     * Patterne de file validate-branch-namerc.js =(pattern:  '^(main|staging|production|prod|dev)$|^(feat|fix|bump|rel(?:ease)?)/.+$')
     * creer une branch avec la bonne nommage ()
     - Faire un push de branch blabla vers main ou origin sachant que le nom de branchj blabla n'est pas conforme

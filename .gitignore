@@ -20,3 +20,4 @@
 ###< phpunit/phpunit ###
 ./git-precommit-checks.config.js
 .git-precommit-checks.config.js
+/node_modules/

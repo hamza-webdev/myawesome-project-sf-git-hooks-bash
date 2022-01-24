@@ -1,0 +1,19 @@
+{
+  "name": "website-skeleton",
+  "version": "1.0.0",
+  "description": "* sudo mysql -v * mysql * CREATE USER 'test'@'127.0.0.1' IDENTIFIED BY 'test'; * GRANT ALL PRIVILEGES ON *.* TO 'test'@'127.0.0.1'; * sudo symfony console d:m:m --no-interaction - Dump mysql creer les table with entity files * symfony console doctrine:schema:update --dump-sql",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "git-precommit-checks": "^3.0.7",
+    "husky": "^7.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hamzadev",
+  "license": "ISC"
+}

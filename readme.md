@@ -54,6 +54,25 @@ OR
     - ensuite tape cette cmd
     * npx husky add .husky/pre-commit 'npx --no-install git-precommit-checks'
 
+    # Message de commit 
+    - <type:>[optional scope]: <description>
+
+    - [optional body]
+
+    - Close #us1234
+
+    - [optional footer(s)]
+
+    * Type: fix:, feat:, build:, chore:, ci:, docs:, style:, refactor:, perf:, test:
+
+    # install and configuration commitLint
+    * npm install --save-dev @commitlint/cli @commitlint/config-conventional
+    - creer un fichier commitlint.config.js
+    * npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
+
+
+
+
 
 
 

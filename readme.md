@@ -84,7 +84,13 @@ OR
     ```
     - Asistance de message commit with cz (avant de commiter tapez)
     * > npx cz
-    
+
+    ## Nommage de Branch Git avec les hooks Git, husky et validate-branch-name
+
+    * npm install --save-dev validate-branch-name
+    * Creer un fichier nommé validate-branch-namerc.js (into patterne)
+    * execute cmd: npx husky add .husky/pre-push 'npx --no-install validate-branch-name'
+
 
 
 

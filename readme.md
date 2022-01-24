@@ -90,6 +90,7 @@ OR
     * npm install --save-dev validate-branch-name
     * Creer un fichier nommé validate-branch-namerc.js (into patterne)
     * execute cmd: npx husky add .husky/pre-push 'npx --no-install validate-branch-name'
+    * creer une branch
 
 
 

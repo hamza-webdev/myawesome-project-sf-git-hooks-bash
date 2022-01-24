@@ -46,5 +46,14 @@ OR
     ## GIT Hooks pre-commit ..
 
     * npm install --save-dev git-precommit-checks
+    * npm install husky
+    * npx husky install
+
+    - creer fichier git-precommit-checks.config.js
+    *  touch git-precommit-checks.config.js
+    - ensuite tape cette cmd
+    * npx husky add .husky/pre-commit 'npx --no-install git-precommit-checks'
+
+
 
 

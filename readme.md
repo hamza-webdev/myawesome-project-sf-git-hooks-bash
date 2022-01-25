@@ -122,6 +122,31 @@
     ## Crear un cle SSH in gitlab
     * ssh-keygen -t ed25519 -C "email"
 
+    ## Install Docker
+
+* docker login dockerhub: 23aba1c6-0d70-4af9-ae50-bd55f05c42db
+gitlab: glpat-zshdivUWVq48Ak5ekMrp
+    `docker login hostname -u username `
+
+      ` sudo docker pull nginx ` 
+      * and run nginx
+      ` sudo docker run -dit --name nginx-dev nginx`
+      * connect to container nginx-dev
+      docker exec -it nginx-dev bash
+      * tapez cmd: cd (pour etre dans la root)
+      * cmd: curl http://localhost
+
+      * tag le conteneur nginx with new name gitlab 
+      ` docker tag nginx docker registry.gitlab.com/hamza-webdev/myawesome-project-sf-git-hooks-bash:latest `
+      * push the tag (regsitry-gitlab) in gitlab
+      * sudo docker push registry.gitlab.com/hamza-webdev/myawesome-project-sf-git-hooks-bash 
+
+
+
+
+
+
+
 
 
 

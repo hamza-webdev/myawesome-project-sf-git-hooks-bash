@@ -1,3 +1,9 @@
+## Introduction
+
+* Name: Hamza
+* Job: developper
+
+## Getting starter
 * sudo mysql -v
 * mysql
 * CREATE USER 'test'@'127.0.0.1' IDENTIFIED BY 'test';

@@ -6,7 +6,7 @@ FROM php:7.4-apache
 
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin
 
-RUN install-php-extentisions gd mysqli pdo pdo_mysql xdebug 
+RUN install-php-extentisions gd mysqli pdo pdo-mysql xdebug 
 
 COPY docker/dev/xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 

@@ -1,7 +1,9 @@
 ## Introduction
 
 * Name: Hamza
-* Job: developper
+* Job: developper 
+* Tel: 0616014011
+* E-mail: bedwihamza@gmail.com
 
 ## Getting starter
 * sudo mysql -v

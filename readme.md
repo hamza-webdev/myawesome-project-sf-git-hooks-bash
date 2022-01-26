@@ -140,7 +140,41 @@ gitlab: glpat-zshdivUWVq48Ak5ekMrp
       ` docker tag nginx docker registry.gitlab.com/hamza-webdev/myawesome-project-sf-git-hooks-bash:latest `
       * push the tag (regsitry-gitlab) in gitlab
       * sudo docker push registry.gitlab.com/hamza-webdev/myawesome-project-sf-git-hooks-bash 
+      * Add a commit message docker
+      ` sudo docker commit -m "Nginx image taken from dockerhub and pushed into gitlab container registery" 209d13f8694c registry.gitlab.com/hamza-webdev/myawesome-project-sf-git-hooks-bash/nginx:latest`
 
+      * Pull the image we just pushed
+      ` docker pull registry.gitlab.com/hamza-webdev/myawesome-project-sf-git-hooks-bash/nginx:latest`
+
+      * Check the image history
+        `docker images history ImagenameHash`
+
+## Image to Gitlab Reistry
+ 
+ - How to write a dockerfile
+    - `touch Dockerfile`
+    - `sudo docker build -t="apache_webserver" -f Dockerfile .`
+
+1. Write a simple Dockerfile.We will write a simple Dockerfile for the apache webserver 
+    let's create a simple HTML file -
+    ⏩ docker build -t="apache_webserver" -f Dockerfile .
+    ⏩ docker images`
+
+2. Run a docker container from that image
+    ⏩ docker run -d -p 8000:80 apache_webserver`
+    ⏩ docker ps
+    ⏩ docker exec -it 8ab4a7dd76bc bash
+    ⏩ service apache2 status
+
+3. Let's push this image to GitLab registry
+    ⏩ docker tag df2a2f604f47 registry.gitlab.com/hamza-webdev/myawesome-project-sf-git-hooks/apache_webserver:latest
+    ⏩ docker login registry.gitlab.com -u hamza-webdev
+    ⏩ docker ps 
+    ⏩ docker commit -m "Adding apache webserver" 8ab4a7dd76bc registry.gitlab.com/hamza-webdev/myawesome-project-sf-git-hooks/apache_webserver
+    ⏩ docker push registry.gitlab.com/hamza-webdev/myawesome-project-sf-git-hooks/apache_webserver:latest
+
+
+ - How to publish that image to Gitlab Registry
 
 
 

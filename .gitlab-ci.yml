@@ -1,35 +1,25 @@
+# pull a docker image from dockerhub
 default:
-  image: alpine:latest
+  image: docker:stable
   tags:
-    - hamza-runner-ubuntu
+    - "hamza-runner-ubuntu"
+
+variables:
+  CONTAINER_REGISTRY: "registry.gitlab.com"
+  CI_DOCKER_REPO: $CONTAINER_REGISTRY/hamza-webdev/myawesome-project-sf-git-hooks-bash/nginx:latest
 
 stages:
-  - build
-  - test
-  - deploy
-
+  - build docker image
+  - push docker image
 before_script:
-  - echo "I am before script "
+  - docker info
+  - docker login -u $CI_REGISTRY_USER -p $CI _REGISTRY_PASSWORD
 
-after_script:
-  - echo "I am from after scriiiipt !!"
-
-build step 1:
-  stage: build
+build and push:
+  stage: build docker image
   script:
-    - echo "I am from build step 1"
-
-build step 2:
-  stage: build
-  script:
-    - echo "I am from build step 2"
-
-test step 1:
-  stage: test
-  script:
-    - echo "I am from the test sep 1"
-
-deploy:
-  stage: deploy
-  script:
-    - echo "I am  deploying somthing !!!!"
+    - docker build -t $CI_DOCKER_REPO:$CI_COMMIT_SHORT_SHA -f Dockerfile .
+    - docker push $CI_DOCKER_REPO:$CI_COMMIT_SHORT_SHA
+  only:
+    refs:
+      - merge_requests

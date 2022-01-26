@@ -145,7 +145,7 @@
   ## Install Docker
 
 - docker login dockerhub: 23aba1c6-0d70-4af9-ae50-bd55f05c42db
-  gitlab: glpat-zshdivUWVq48Ak5ekMrp
+  gitlab token: glpat-yRiTKA7HFdU3xkH2Ux8q
   `docker login hostname -u username `
 
       ` sudo docker pull nginx `
@@ -196,13 +196,13 @@
 
 3. Let's push this image to GitLab registry
 
-   ⏩ docker tag df2a2f604f47 registry.gitlab.com/hamza-webdev/myawesome-project-sf-git-hooks/apache_webserver:latest
+   ⏩ docker tag 87e6f1eb6fbd registry.gitlab.com/hamza-webdev/myawesome-project-sf-git-hooks/apache_webserver:latest
 
    ⏩ docker login registry.gitlab.com -u hamza-webdev
 
    ⏩ docker ps
 
-   ⏩ docker commit -m "Adding apache webserver" 8ab4a7dd76bc registry.gitlab.com/hamza-webdev/
+   ⏩ docker commit -m "Adding apache webserver" 87e6f1eb6fbd registry.gitlab.com/hamza-webdev/
    myawesome-project-sf-git-hooks/apache_webserver
 
    ⏩ docker push registry.gitlab.com/hamza-webdev/myawesome-project-sf-git-hooks/apache_webserver:latest

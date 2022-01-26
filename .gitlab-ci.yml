@@ -25,6 +25,8 @@ test step 1:
   stage: test
   script:
     - echo "I am from the test sep 1"
+  tags:
+    - 98daeee0
 
 deploy:
   stage: deploy

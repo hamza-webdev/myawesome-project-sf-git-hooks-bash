@@ -1,4 +1,7 @@
-image: alpine:latest
+default:
+  image: alpine:latest
+  tags:
+    - hamza-runner-ubuntu
 
 stages:
   - build
@@ -26,7 +29,7 @@ test step 1:
   script:
     - echo "I am from the test sep 1"
   tags:
-    - 98daeee0
+    - hamza-runner-ubuntu
 
 deploy:
   stage: deploy

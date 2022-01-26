@@ -16,14 +16,14 @@ build step 1:
   script:
     - echo "I am from build step 1"
   tags:
-    - Ubuntu
+    - mac
 
 build step 2:
   stage: build
   script:
     - echo "I am from build step 2"
   tags:
-    - Ubuntu
+    - mac
 
 test step 1:
   stage: test
@@ -37,4 +37,4 @@ deploy:
   script:
     - echo "I am  deploying somthing !!!!"
   tags:
-    - Docker
+    - mac

@@ -286,3 +286,5 @@ docker run -e TERM -e COLORTERM -e LC_ALL=C.UTF-8 -it --rm alpine sh -uec '
 - Tip: Run _ p10k configure _ while in Docker to try a different prompt style.
 
 ## Type p10k configure
+
+## Build and Push Docker Image

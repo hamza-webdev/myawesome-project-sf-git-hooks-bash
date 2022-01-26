@@ -15,15 +15,11 @@ build step 1:
   stage: build
   script:
     - echo "I am from build step 1"
-  tags:
-    - mac
 
 build step 2:
   stage: build
   script:
     - echo "I am from build step 2"
-  tags:
-    - mac
 
 test step 1:
   stage: test
@@ -36,5 +32,3 @@ deploy:
   stage: deploy
   script:
     - echo "I am  deploying somthing !!!!"
-  tags:
-    - mac

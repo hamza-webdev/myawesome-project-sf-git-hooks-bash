@@ -1,0 +1,59 @@
+image: php:7.4
+
+stages: 
+  - test
+  - build
+  - deploy
+
+test:src:
+  stage: test
+  before_script:
+    #Install dependencies
+    - bash ci/docker_install.sh > /dev/null
+    - curl --silent --show-error https://getcomposer.org/installer | php 
+    - php composer.phar global require danielstjules/pho:devmaster
+    - php composer.phar installer
+  script: 
+    - php --version
+    - (find src -type f -name '*.php' | while read l ; do php -l $1 || exit 1; done )
+    - $HOME/.composer/vendor/bin/pho 
+
+build: 
+  stage: build 
+  before_script:
+    - apt-get update -yqq 
+    - apt-get install git bzip2 -yqq
+  script:
+    - bash ci/build.sh
+  artifacts:
+    paths: 
+      - "*.tar.bz2"
+  only: 
+    - master 
+
+deployment_staging: 
+  stage: deploy
+  script: 
+    - apt-get update -yqq
+    - apt-get install git openssh-client -yqq
+    # Run ssh-agent
+    - eval $(ssh-agent -s)
+    # Add the ssh key stored in SSH_PRIVATE_KEY to the agent store
+    - ssh-add <(echo "$SCP_PRIVATE_KEY")
+    - mkdir -p ~/ssh 
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - bash ci/deploy.sh
+  environment: 
+    name: staging 
+    url: https://staging.photoboothsanywhere.composer
+  only: 
+    - master 
+
+
+
+    
+
+
+
+
+    

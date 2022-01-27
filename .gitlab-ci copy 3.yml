@@ -1,0 +1,35 @@
+default:
+  image: alpine:latest
+  tags:
+    - hamza-runner-ubuntu
+
+stages:
+  - build
+  - test
+  - deploy
+
+before_script:
+  - echo "I am before script "
+
+after_script:
+  - echo "I am from after scriiiipt !!"
+
+build step 1:
+  stage: build
+  script:
+    - echo "I am from build step 1"
+
+build step 2:
+  stage: build
+  script:
+    - echo "I am from build step 2"
+
+test step 1:
+  stage: test
+  script:
+    - echo "I am from the test sep 1"
+
+deploy:
+  stage: deploy
+  script:
+    - echo "I am  deploying somthing !!!!"
